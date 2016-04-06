@@ -10,6 +10,7 @@ Vote Counting
 # Authors
 
 * Jose Labra
+* Darío González
 
 
 
