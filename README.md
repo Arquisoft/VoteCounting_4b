@@ -11,6 +11,7 @@ Vote Counting
 
 * Jose Labra
 * Darío González
+* Raúl Rodríguez
 
 
 
