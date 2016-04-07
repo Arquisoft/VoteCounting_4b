@@ -14,9 +14,9 @@ public class Main {
   private static final Logger LOG = LoggerFactory.getLogger(Main.class);
 
   @RequestMapping("/")
-  public ModelAndView landing(Model model) {
+  public String landing(Model model) {
     LOG.info("Landing page access");
-    return new ModelAndView("landing");
+    return "index";
   }
   
 }
