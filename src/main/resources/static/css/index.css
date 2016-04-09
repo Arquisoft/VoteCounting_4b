@@ -13,3 +13,15 @@ h1 {
 #pieResultados {
     margin-left: 600px;
 }
+
+#subTitle {
+    color: lavender;
+    font: 25px Helvetica, Arial, Sans-Serif;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -60px;
+}
+
+header {
+    margin-bottom: 70px;
+}
