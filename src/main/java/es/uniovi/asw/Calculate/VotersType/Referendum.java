@@ -10,19 +10,14 @@ public class Referendum {
 	//sustituir los map de los list por la clase votos más adelante
 	private List<Vote> votes;
 	private Map<String, Integer> recuento;
-	private String YES;
-	private String NO;
-	private String WHITE;
+	//private Map<String,Map<String,Integer>> estadistica;
+	private static final String YES = "Yes";
+	private String NO = "No";
+	private String WHITE = "White";
 	
-	public Referendum(List<Vote> votes, String Yes, String No, String White){
-		this.votes=votes;
-		this.recuento = new HashMap<String,Integer>();
-		this.YES=Yes;
-		this.NO=No;
-		this.WHITE=White;
-		
+	public Referendum(){
+		this.recuento = new HashMap<String,Integer>();	
 		iniciar();
-		calcular();
 	}
 
 	private void iniciar(){
