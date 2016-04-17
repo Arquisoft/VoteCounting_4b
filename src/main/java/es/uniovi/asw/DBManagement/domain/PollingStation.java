@@ -12,6 +12,8 @@ public class PollingStation {
 	@Id
 	@GeneratedValue
 	private Long id;
+	
+	private Long codigo;
 	private String circunscripcion;
 	private String comunidadAutonoma;
 
@@ -74,6 +76,14 @@ public class PollingStation {
 	public String toString() {
 		return "PollingStation [id=" + id + ", circunscripcion=" + circunscripcion + ", comunidadAutonoma="
 				+ comunidadAutonoma + "]";
+	}
+
+	public Long getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Long codigo) {
+		this.codigo = codigo;
 	}
 
 }

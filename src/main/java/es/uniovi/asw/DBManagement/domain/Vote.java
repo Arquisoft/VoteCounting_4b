@@ -10,7 +10,7 @@ import javax.persistence.Table;
 public class Vote {
 
 	@Id
-	@GeneratedValue	
+	@GeneratedValue
 	private Long id;
 
 	private PollingStation colegio;

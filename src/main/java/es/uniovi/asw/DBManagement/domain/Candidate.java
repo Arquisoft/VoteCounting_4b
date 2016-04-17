@@ -1,5 +1,5 @@
 package es.uniovi.asw.DBManagement.domain;
 
-public class Candidate {
-
+public enum Candidate {
+	PP, PSOE, PODEMOS, Ciudadanos, IU, UPD
 }
