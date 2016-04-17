@@ -11,8 +11,6 @@ import es.uniovi.asw.DBManagement.domain.PollingStation;
 @Component("DBManagement")
 public interface DBManagement extends CrudRepository<Vote, Long> {
 
-	List<Vote> findById(Long id);
-
 	List<Vote> findByColegio(PollingStation colegio);
 
 	List<Vote> findAll();
