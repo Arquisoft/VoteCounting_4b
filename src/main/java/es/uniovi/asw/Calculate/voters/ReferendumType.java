@@ -1,15 +1,15 @@
-package es.uniovi.asw.Calculate.VotersType;
+package es.uniovi.asw.Calculate.voters;
 
 import java.util.List;
 import java.util.Map;
 
+import es.uniovi.asw.DBManagement.GetVotes;
 import es.uniovi.asw.DBManagement.domain.Vote;
 
 public class ReferendumType implements VotersType{
 	
 	private Referendum tipo;
 
-	
 	public  ReferendumType(List<Vote> votes) {
 		tipo = new Referendum();
 	}
@@ -18,17 +18,16 @@ public class ReferendumType implements VotersType{
 	public Map<String, Integer> getResult() {
 		return tipo.getResult();
 	}
-	
-	/*@Override
-	public List<Map<String, Integer>> getStatics() {
-		return null;
-	}*/
 
 	@Override
-	public void actualize(List<Vote> votes) {
-		tipo.actualizar(votes);
+	public void actualize(GetVotes votes) {
+		for(Vote v: votes.getVotes()){
+			if(!v.isContabilizado()){
+				
+				votes.updateVote(v.getId());//actualizamos el estado del voto
+			}
 		}
-
-	
+		
+	}
 
 }
