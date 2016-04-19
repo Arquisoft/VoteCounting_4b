@@ -1,9 +1,8 @@
 package es.uniovi.asw.WebController.Observer;
 
-import es.uniovi.asw.WebController.Main;
-
-import java.util.HashMap;
 import java.util.Map;
+
+import es.uniovi.asw.WebController.Main;
 
 /**
  * Created by Daplerio on 7/4/16.

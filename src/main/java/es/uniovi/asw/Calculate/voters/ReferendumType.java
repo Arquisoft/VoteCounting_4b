@@ -6,14 +6,14 @@ import java.util.Map;
 import es.uniovi.asw.DBManagement.GetVotes;
 import es.uniovi.asw.DBManagement.domain.Vote;
 
-public class ReferendumType implements VotersType{
-	
+public class ReferendumType implements VotersType {
+
 	private Referendum tipo;
 
-	public  ReferendumType(List<Vote> votes) {
+	public ReferendumType(List<Vote> votes) {
 		tipo = new Referendum();
 	}
-	
+
 	@Override
 	public Map<String, Double> getResult() {
 		return tipo.getPercents();
@@ -21,13 +21,13 @@ public class ReferendumType implements VotersType{
 
 	@Override
 	public void actualize(GetVotes votes) {
-		for(Vote v: votes.getVotes()){
-			if(!v.isContabilizado()){
-				
-				votes.updateVote(v.getId());//actualizamos el estado del voto
+		for (Vote v : votes.getVotes()) {
+			if (!v.isContabilizado()) {
+
+				votes.updateVote(v.getId());// actualizamos el estado del voto
 			}
 		}
-		
+
 	}
 
 }

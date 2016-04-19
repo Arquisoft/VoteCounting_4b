@@ -27,7 +27,8 @@ public class Calculate {
 	}
 
 	private void sendInfo() {
-		obserber.actualizar(info.getResultado());// pasar info como parametro a la web
+		obserber.actualizar(info.getResultado());// pasar info como parametro a
+													// la web
 	}
 
 	public void actualiceC() {

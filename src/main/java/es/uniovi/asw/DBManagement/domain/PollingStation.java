@@ -12,13 +12,20 @@ public class PollingStation {
 	@Id
 	@GeneratedValue
 	private Long id;
-	
+
 	private Long codigo;
 	private String circunscripcion;
 	private String comunidadAutonoma;
 
 	public PollingStation() {
 
+	}
+
+	public PollingStation(Long codigo, String circunscripcion, String comunidadAutonoma) {
+		super();
+		this.codigo = codigo;
+		this.circunscripcion = circunscripcion;
+		this.comunidadAutonoma = comunidadAutonoma;
 	}
 
 	public String getCircunscripcion() {
