@@ -4,16 +4,15 @@ import java.util.Map;
 
 public class Info implements ObjectInfo {
 	
-	private Map<String,Integer> resultados;
-	//private List<Map<String,Integer>> estadisticas;
+	private Map<String,Double> resultados;
 	
 	@Override
-	public void actualiza(Map<String,Integer> resultados) {
+	public void actualiza(Map<String,Double> resultados) {
 		this.resultados=resultados;
 		}
 
 	@Override
-	public Map<String, Integer> getResultado() {
+	public Map<String, Double> getResultado() {
 		return resultados;
 	}
 

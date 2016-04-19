@@ -11,15 +11,15 @@ import java.util.Map;
 
 @Controller
 public class Main {
-	public static Map<String, Integer> resultados;
+	public static Map<String, Double> resultados;
 
   @RequestMapping("/")
   public String landing(Model model) {
     
       // Datos falsos temporales
-      resultados = new HashMap<String, Integer>();
-      resultados.put("SI", 50);
-      resultados.put("NO", 50);
+      resultados = new HashMap<String, Double>();
+      resultados.put("SI", 50.0);
+      resultados.put("NO", 50.0);
 
       int[] aux = new int[2];
       aux[0] = 70;
@@ -29,8 +29,8 @@ public class Main {
     return "index";
   }
 
-    private int[] prepararArray() {
-        int[] array = new int[resultados.size()];
+    private double[] prepararArray() {
+        double[] array = new double[resultados.size()];
         for(int i=0;i<resultados.size();i++)
         {
             array[i] = resultados.get(i);

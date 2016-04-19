@@ -18,6 +18,7 @@ public class Calculate {
 		this.type = type;
 		this.info = info;
 
+		obserber = new WebObserver();
 		sendInfo();
 	}
 

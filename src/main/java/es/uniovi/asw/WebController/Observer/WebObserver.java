@@ -10,7 +10,7 @@ import java.util.Map;
  */
 public class WebObserver implements Observer {
 
-	public void actualizar(Map<String, Integer> resultados) {
+	public void actualizar(Map<String, Double> resultados) {
 
 		Main.resultados = resultados;
 	}

@@ -7,6 +7,6 @@ import java.util.Map;
  */
 public interface Observer {
 
-	public void actualizar(Map<String, Integer> resultados);
+	public void actualizar(Map<String, Double> resultados);
 
 }

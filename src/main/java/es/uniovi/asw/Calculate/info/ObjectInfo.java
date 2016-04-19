@@ -4,8 +4,8 @@ import java.util.Map;
 
 public interface  ObjectInfo {
 
-	public void actualiza(Map<String,Integer> resultados);
-	public Map<String,Integer> getResultado();
-	//public Map<String,Map<String,Integer>> getEstadisticas;
+	public void actualiza(Map<String,Double> resultados);
+	public Map<String,Double> getResultado();
+
 	
 }

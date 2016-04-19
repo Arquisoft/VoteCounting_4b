@@ -6,7 +6,7 @@ import es.uniovi.asw.DBManagement.GetVotes;
 
 public interface VotersType {
 
-	public Map<String,Integer> getResult();
+	public Map<String,Double> getResult();
 	public void actualize(GetVotes votes);
 	
 }
