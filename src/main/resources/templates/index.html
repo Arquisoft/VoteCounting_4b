@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.springframework.org/schema/jdbc">
     <head>
         <meta charset="utf-8" />
         <title>Resultados Elecciones 2016</title>
@@ -9,37 +9,30 @@
     </head>
     <body>
 
-    <section id="mainSection">
-
         <header>
             <h1>Resultados Elecciones 2016</h1>
             <p id="subTitle">Última actualización: 20/05/2016 23:45</p>
         </header>
-        <!-- pie chart canvas element -->
-        <canvas id="pieResultados" width="600" height="400"></canvas>
 
-    </section>
+        <section id="mainSection">
+        </section>
+        <aside><!-- pie chart canvas element -->
+            <canvas id="pieResultados" width="600" height="400"></canvas></aside>
 
         <!-- bar chart canvas element -->
-        <script>
+        <script th:inline="javascript">
+
+            var array = [[${resultados}]];
 
            // pie chart data
             var pieData = [
                 {
-                    value: 20,
-                    color:"#878BB6"
+                    value: array[0],
+                    color: "#FF0000"
                 },
                 {
-                    value : 40,
-                    color : "#4ACAB4"
-                },
-                {
-                    value : 10,
-                    color : "#FF8153"
-                },
-                {
-                    value : 30,
-                    color : "#FFEA88"
+                    value : array[1],
+                    color : "#0000FF"
                 }
             ];
             // pie chart options

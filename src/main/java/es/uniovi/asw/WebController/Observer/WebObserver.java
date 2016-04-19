@@ -1,5 +1,8 @@
 package es.uniovi.asw.WebController.Observer;
 
+import es.uniovi.asw.WebController.Main;
+
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -8,11 +11,8 @@ import java.util.Map;
 public class WebObserver implements Observer {
 
 	public void actualizar(Map<String, Integer> resultados) {
-		for(String key:resultados.keySet()){
-			
-		}
-			
 
+		Main.resultados = resultados;
 	}
 
 }

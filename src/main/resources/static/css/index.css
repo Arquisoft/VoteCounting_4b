@@ -10,16 +10,12 @@ h1 {
     vertical-align: middle;
 }
 
-#pieResultados {
-    margin-left: 600px;
-}
-
 #subTitle {
     color: lavender;
-    font: 25px Helvetica, Arial, Sans-Serif;
+    font: 30px Helvetica, Arial, Sans-Serif;
     text-align: center;
     vertical-align: middle;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 header {
