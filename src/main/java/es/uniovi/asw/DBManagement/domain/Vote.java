@@ -3,6 +3,7 @@ package es.uniovi.asw.DBManagement.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -13,7 +14,9 @@ public class Vote {
 	@GeneratedValue
 	private Long id;
 
+	@OneToOne
 	private PollingStation colegio;
+	
 	private Candidate candidatura;
 	private boolean contabilizado;
 
