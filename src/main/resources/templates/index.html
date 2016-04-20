@@ -15,6 +15,18 @@
         </header>
 
         <section id="mainSection">
+
+            <table style="width:100%">
+                <tr>
+                    <td>SI</td>
+                    <td>NO</td>
+                </tr>
+                <tr>
+                    <td  th:text="${resultados[0]}"/>
+                    <td  th:text="${resultados[1]}"/>
+                </tr>
+            </table>
+
         </section>
         <aside><!-- pie chart canvas element -->
             <canvas id="pieResultados" width="600" height="400"></canvas></aside>
