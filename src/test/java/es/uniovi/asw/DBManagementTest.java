@@ -62,7 +62,6 @@ public class DBManagementTest {
 	@Test
 	public void testFindByCandidate() {
 		assertTrue(repository.findByCandidatura(Candidate.SI).size() == 0);
-
 	}
 
 }
