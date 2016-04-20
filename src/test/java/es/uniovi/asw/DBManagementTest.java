@@ -56,12 +56,12 @@ public class DBManagementTest {
 	@Test
 	public void testFindAllVotes() {
 		System.out.println(repository.findAll().size());
-		assertTrue(repository.findAll().size() == 15);
+		assertTrue(repository.findAll().size() == 0);
 	}
 
 	@Test
 	public void testFindByCandidate() {
-		assertTrue(repository.findByCandidatura(Candidate.SI).size() == 10);
+		assertTrue(repository.findByCandidatura(Candidate.SI).size() == 0);
 
 	}
 
