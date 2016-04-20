@@ -2,11 +2,11 @@ package es.uniovi.asw;
 
 import static org.junit.Assert.*;
 
-import java.util.ArrayList;
-import java.util.List;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import cucumber.api.java.Before;
 import es.uniovi.asw.DBManagement.DBManagement;
@@ -15,11 +15,12 @@ import es.uniovi.asw.DBManagement.domain.Candidate;
 import es.uniovi.asw.DBManagement.domain.PollingStation;
 import es.uniovi.asw.DBManagement.domain.Vote;
 
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = Application.class)
 public class DBManagementTest {
 
 	@Autowired
 	DBManagement repository;
-	List<Vote> votos = new ArrayList<Vote>();
 
 	@Autowired
 	PollingStationManagement colegioRepository;
@@ -27,6 +28,7 @@ public class DBManagementTest {
 	@Before
 	public void before() {
 		repository.deleteAll();
+		colegioRepository.deleteAll();
 
 		colegioRepository.save(new PollingStation(new Long(50), "Asturias", "Principado de Asturias"));
 		colegioRepository.save(new PollingStation(new Long(51), "Madrid", "Comunidad de Madrid"));
@@ -53,6 +55,7 @@ public class DBManagementTest {
 
 	@Test
 	public void testFindAllVotes() {
+		System.out.println(repository.findAll().size());
 		assertTrue(repository.findAll().size() == 15);
 	}
 
