@@ -11,6 +11,7 @@ public class DBVotes implements GetVotes{
 	@Autowired
 	private DBManagement repository;
 	
+	
 	public DBVotes(DBManagement repository){
 		this.repository=repository;
 	}

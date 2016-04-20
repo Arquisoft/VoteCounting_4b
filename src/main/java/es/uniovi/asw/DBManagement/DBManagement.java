@@ -15,7 +15,6 @@ public interface DBManagement extends CrudRepository<Vote, Long> {
 
 	List<Vote> findByColegio(PollingStation colegio);
 
-	@Override
 	List<Vote> findAll();
 
 	List<Vote> findByCandidatura(Candidate candidatura);

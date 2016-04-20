@@ -1,14 +1,17 @@
 package es.uniovi.asw.DBManagement.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "VOTE")
-public class Vote {
+public class Vote implements Serializable {
 
 	@Id
 	@GeneratedValue
