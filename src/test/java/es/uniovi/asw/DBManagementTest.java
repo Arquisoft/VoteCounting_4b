@@ -62,6 +62,18 @@ public class DBManagementTest {
 	@Test
 	public void testFindByCandidate() {
 		assertTrue(repository.findByCandidatura(Candidate.SI).size() == 10);
+		assertTrue(repository.findByCandidatura(Candidate.NO).size() == 5);
+
+	}
+
+	@Test
+	public void testFindByCodigo() {
+		assertTrue(!colegioRepository.findByCodigo(new Long(50)).isEmpty());
+	}
+
+	@Test
+	public void testFindByCircunscripcion() {
+		assertTrue(colegioRepository.findByCircunscripcion("Asturias").size() == 1);
 	}
 
 }
