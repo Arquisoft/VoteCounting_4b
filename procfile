@@ -1,1 +1,1 @@
-java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar
+web: java -Dserver.port=$PORT -jar target/VoteCounting_4b-0.0.1.jar
